@@ -1,0 +1,3 @@
+displayName = Cosmere
+author = Peter and Tea
+version = 0.1
