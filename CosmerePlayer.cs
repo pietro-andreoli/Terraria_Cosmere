@@ -15,5 +15,6 @@ namespace Cosmere
 {
 	class CosmerePlayer : ModPlayer
 	{
+		public bool sylbladebuff;
 	}
 }
