@@ -17,6 +17,9 @@ namespace Cosmere.Buffs
 
 		}
 
-		//public override void U
+		public override void Update(Player player, ref int buffIndex)
+		{
+			base.Update(player, ref buffIndex);
+		}
 	}
 }
