@@ -16,5 +16,6 @@ namespace Cosmere
 	class CosmerePlayer : ModPlayer
 	{
 		public bool patternbladeBuff;
+		public bool sylbladebuff;
 	}
 }
