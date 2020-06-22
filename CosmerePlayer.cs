@@ -17,5 +17,11 @@ namespace Cosmere
 	{
 		public bool patternbladeBuff;
 		public bool sylbladebuff;
+
+		public override void ResetEffects()
+		{
+			patternbladeBuff = false;
+			sylbladebuff = false;
+		}
 	}
 }

@@ -1,5 +1,7 @@
-﻿using Terraria.ID;
+﻿using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace Cosmere.Items
 {
@@ -34,6 +36,14 @@ namespace Cosmere.Items
 			recipe.AddTile(TileID.WorkBenches);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
+		}
+
+		public override void HoldItem(Player player)
+		{
+			CosmerePlayer cPlayer = player.GetModPlayer<CosmerePlayer>();
+			cPlayer.patternbladeBuff = true;
+
+			player.AddBuff(BuffType<Buffs.PatternbladeBuff>(), 2);
 		}
 	}
 }

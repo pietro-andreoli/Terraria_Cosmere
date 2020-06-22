@@ -1,4 +1,5 @@
-﻿using Terraria;
+﻿using log4net.Repository.Hierarchy;
+using Terraria;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
@@ -19,7 +20,8 @@ namespace Cosmere.Buffs
 
 		public override void Update(Player player, ref int buffIndex)
 		{
-			base.Update(player, ref buffIndex);
+			CosmerePlayer cPlayer = player.GetModPlayer<CosmerePlayer>();
+			
 		}
 	}
 }
