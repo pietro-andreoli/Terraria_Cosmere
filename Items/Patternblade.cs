@@ -1,5 +1,8 @@
-﻿using Terraria.ID;
+﻿using log4net.Repository.Hierarchy;
+using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace Cosmere.Items
 {
@@ -34,6 +37,17 @@ namespace Cosmere.Items
 			recipe.AddTile(TileID.WorkBenches);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
+		}
+
+		public override void HoldItem(Player player)
+		{
+			CosmerePlayer cPlayer = player.GetModPlayer<CosmerePlayer>();
+			// mod.Logger.Info("patternBuff applied");
+			cPlayer.patternbladeBuff = true;
+
+			// Applies PattenbladeBuff to player for 2 frames. Duration does not matter as this buff is applied while holding the item.
+			player.AddBuff(BuffType<Buffs.PatternbladeBuff>(), 2);
+			
 		}
 	}
 }

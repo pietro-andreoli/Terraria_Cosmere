@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace Cosmere.Items
 {
-	public class Sylblade : ModItem
+	public class TutorialSword : ModItem
     {
 		public override void SetStaticDefaults() 
 		{
